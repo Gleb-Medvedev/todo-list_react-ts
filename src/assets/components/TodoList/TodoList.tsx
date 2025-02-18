@@ -1,11 +1,12 @@
-import { FC } from "react";
-import { ITodo } from "../../interfaces/ITodo";
+import {FC, ReactNode} from "react";
+// import { ITodo } from "../../interfaces/ITodo";
+// import {ITodoItem} from "../TodoItem/TodoItem.tsx";
 
-// interface ITodoList extends ITodo {
-//     todos: ITodo[];
-// }
+interface ITodoList {
+    children: ReactNode[]
+}
 
-const TodoList: FC<ITodo[]> = ({children}) => {
+const TodoList: FC<ITodoList> = ({children}) => {
     return (
         <ul className="todo-list">
             {children}
